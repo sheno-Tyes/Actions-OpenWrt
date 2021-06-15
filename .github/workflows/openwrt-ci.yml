@@ -17,6 +17,8 @@ on:
   #   - cron: 0 20 * * *
   release:
     types: [published]
+  watch:
+    types: started
 env:
   DIY_P1_SH: diy-part1.sh
   
