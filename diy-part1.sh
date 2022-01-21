@@ -5,65 +5,60 @@
 # Author: P3TERX
 # Blog: https://p3terx.com
 #=================================================
-# Modify default IP
-sed -i 's/192.168.1.1/192.168.99.1/g' package/base-files/files/bin/config_generate
-#git clone https://github.com/jerrykuku/openwrt-package package/one
-#git clone https://github.com/kenzok8/openwrt-packages package/two
-#git clone https://github.com/kenzok8/small package/small
-#git clone https://github.com/jerrykuku/lua-maxminddb package/lua-maxminddb
-# Add luci-app-ssr-plus
-#pushd package/lean
-#git clone --depth=1 https://github.com/fw876/helloworld
-#popd
-
+#!/bin/bash
+pushd package/lean
+git clone --depth=1 https://github.com/fw876/helloworld
+popd
 mkdir package/community
 pushd package/community
-# Add Lienol's Packages
-# git clone --depth=1 https://github.com/Lienol/openwrt-package
 # Add luci-app-passwall
 git clone --depth=1 https://github.com/xiaorouji/openwrt-passwall
-
+# add ddns.to
+svn co https://github.com/linkease/nas-packages-luci/trunk/luci/luci-app-ddnsto
+svn co https://github.com/linkease/nas-packages-luci/trunk/luci/luci-app-linkease
+svn co https://github.com/linkease/nas-packages-luci/trunk/luci/luci-app-quickstart
+svn co https://github.com/linkease/nas-packages/trunk/network/services/ddnsto
+svn co https://github.com/linkease/nas-packages/trunk/network/services/linkease
+svn co https://github.com/linkease/nas-packages/trunk/network/services/quickstart
+# add luci-app-jd-dailybonus
 git clone --depth=1 https://github.com/jerrykuku/luci-app-jd-dailybonus
-
-# Add luci-app-vssr <M>
-#git clone --depth=1 https://github.com/jerrykuku/lua-maxminddb.git
-#git clone --depth=1 https://github.com/jerrykuku/luci-app-vssr
-
+# ADD luci-app-fileassistant
+svn co https://github.com/Lienol/openwrt-package/trunk/luci-app-fileassistant
+# ADD luci-app-filebrowser
+svn co https://github.com/Lienol/openwrt-package/trunk/luci-app-filebrowser
+# ADD luci-app-syncthing
+svn co https://github.com/Lienol/openwrt-package/trunk/luci-app-syncthing ../luci-app-syncthing
+# ADD luci-app-vssr
+git clone https://github.com/jerrykuku/lua-maxminddb.git
+git clone https://github.com/jerrykuku/luci-app-vssr.git
+# add luci-app-godproxy
+git clone https://github.com/project-lede/luci-app-godproxy
+# add luci-app-serverchan
+git clone https://github.com/tty228/luci-app-serverchan
 # Add luci-app-adguardhome
-#svn co https://github.com/kenzok8/openwrt-packages/trunk/luci-app-adguardhome ../luci-app-adguardhome
-#svn co https://github.com/kenzok8/openwrt-packages/trunk/AdGuardHome ../AdGuardHome
-
+svn co https://github.com/kenzok8/openwrt-packages/trunk/luci-app-adguardhome ../luci-app-adguardhome
+svn co https://github.com/kenzok8/openwrt-packages/trunk/AdGuardHome ../AdGuardHome
 # Add smartdns
-#svn co https://github.com/pymumu/smartdns/trunk/package/openwrt ../smartdns
-#svn co https://github.com/project-openwrt/openwrt/trunk/package/ntlf9t/luci-app-smartdns ../luci-app-smartdns
-
+svn co https://github.com/pymumu/smartdns/trunk/package/openwrt ../smartdns
+svn co https://github.com/pymumu/luci-app-smartdns/branches/lede ../luci-app-smartdns
 # Add OpenClash
-#git clone --depth=1 -b master https://github.com/vernesong/OpenClash
-
-# Add clash
-#svn co https://github.com/kenzok8/openwrt-packages/trunk/luci-app-clash ../luci-app-clash
-
-# Add aliddns
-#svn co https://github.com/kenzok8/openwrt-packages/trunk/luci-app-aliddns ../luci-app-aliddns
-
-# Add theme
-svn co https://github.com/kenzok8/openwrt-packages/trunk/luci-theme-argon_new ../luci-theme-argon_new
-
-svn co https://github.com/kenzok8/openwrt-packages/trunk/luci-theme-atmaterial ../luci-theme-atmaterial
-
-svn co https://github.com/kenzok8/openwrt-packages/trunk/luci-theme-edge ../luci-theme-edge
-
-svn co https://github.com/kenzok8/openwrt-packages/trunk/luci-theme-ifit ../luci-theme-ifit
-
-svn co https://github.com/kenzok8/openwrt-packages/trunk/luci-theme-opentomato ../luci-theme-opentomato 
-
-svn co https://github.com/kenzok8/openwrt-packages/trunk/luci-theme-opentomcat ../luci-theme-opentomcat
-
-svn co https://github.com/kenzok8/openwrt-packages/trunk/luci-theme-opentopd ../luci-theme-opentopd
-
-
-popd
-
-#pushd package/community/OpenClash/luci-app-openclash/tools/po2lmo
-#make && sudo make install
-#popd
+git clone --depth=1 -b master https://github.com/vernesong/OpenClash
+# add luci-app-clash
+svn co  https://github.com/frainzy1477/luci-app-clash
+# Add luci-app-aliddns
+svn co https://github.com/kenzok8/openwrt-packages/trunk/luci-app-aliddns
+# add theme
+svn co https://github.com/kenzok8/openwrt-packages/trunk/luci-theme-argonne
+svn co https://github.com/kenzok8/openwrt-packages/trunk/luci-theme-atmaterial_new
+svn co https://github.com/kenzok8/openwrt-packages/trunk/luci-theme-edge
+svn co https://github.com/kenzok8/openwrt-packages/trunk/luci-theme-ifit
+svn co https://github.com/kenzok8/openwrt-packages/trunk/luci-theme-mcat
+svn co https://github.com/kenzok8/openwrt-packages/trunk/luci-theme-tomato
+# Add luci-app-bypass
+git clone --depth=1 https://github.com/kiddin9/openwrt-bypass
+# add luci-app-store
+svn co https://github.com/kenzok8/openwrt-packages/trunk/luci-app-store
+# add luci-app-easyupdate
+svn co https://github.com/kenzok8/openwrt-packages/trunk/luci-app-easyupdate
+# add luci-app-pushbot
+git clone https://github.com/zzsj0928/luci-app-pushbot package/luci-app-pushbot
