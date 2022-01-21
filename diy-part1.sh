@@ -44,7 +44,7 @@ svn co https://github.com/pymumu/luci-app-smartdns/branches/lede ../luci-app-sma
 # Add OpenClash
 git clone --depth=1 -b master https://github.com/vernesong/OpenClash
 # add luci-app-clash
-svn co  https://github.com/frainzy1477/luci-app-clash
+git clone https://github.com/frainzy1477/luci-app-clash
 # Add luci-app-aliddns
 svn co https://github.com/kenzok8/openwrt-packages/trunk/luci-app-aliddns
 # add theme
