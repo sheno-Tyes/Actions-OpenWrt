@@ -54,6 +54,7 @@ svn co https://github.com/kenzok8/openwrt-packages/trunk/luci-theme-edge
 svn co https://github.com/kenzok8/openwrt-packages/trunk/luci-theme-ifit
 svn co https://github.com/kenzok8/openwrt-packages/trunk/luci-theme-mcat
 svn co https://github.com/kenzok8/openwrt-packages/trunk/luci-theme-tomato
+git clone https://github.com/XXKDB/luci-theme-argon_armygreen
 # Add luci-app-bypass
 git clone --depth=1 https://github.com/kiddin9/openwrt-bypass
 # add luci-app-store
