@@ -57,6 +57,7 @@ svn co https://github.com/kenzok8/openwrt-packages/trunk/luci-theme-tomato
 git clone https://github.com/XXKDB/luci-theme-argon_armygreen
 svn co https://github.com/xiaoqingfengATGH/luci-theme-infinityfreedom/trunk/luci-theme-infinityfreedom
 svn co https://github.com/rosywrt/luci-theme-rosy/trunk/luci-theme-rosy
+svn co https://github.com/liuran001/openwrt-packages/trunk/luci-theme-argon-lr
 # Add luci-app-bypass
 git clone --depth=1 https://github.com/kiddin9/openwrt-bypass
 # add luci-app-store
