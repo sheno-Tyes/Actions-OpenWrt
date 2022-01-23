@@ -36,8 +36,8 @@ git clone https://github.com/project-lede/luci-app-godproxy
 # add luci-app-serverchan
 git clone https://github.com/tty228/luci-app-serverchan
 # Add luci-app-adguardhome
-svn co https://github.com/kenzok8/openwrt-packages/trunk/luci-app-adguardhome ../luci-app-adguardhome
-svn co https://github.com/kenzok8/openwrt-packages/trunk/AdGuardHome ../AdGuardHome
+#svn co https://github.com/kenzok8/openwrt-packages/trunk/luci-app-adguardhome ../luci-app-adguardhome
+#svn co https://github.com/kenzok8/openwrt-packages/trunk/AdGuardHome ../AdGuardHome
 # Add smartdns
 svn co https://github.com/pymumu/smartdns/trunk/package/openwrt ../smartdns
 svn co https://github.com/pymumu/luci-app-smartdns/branches/lede ../luci-app-smartdns
